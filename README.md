@@ -11,7 +11,7 @@ To do list is a tool for task management. It is possible to add and delete tasks
 
 ### Technologies
 ***
-A list of technologies that were used to create the project:
+A list of technologies that were used to create the project.
 * Visual Studio Code 1.61.1
 * HTML 5
 * Java Script
