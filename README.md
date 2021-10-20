@@ -1,4 +1,4 @@
-# To do list
+# To-do-list
 
 ## Table of Contents
 1. General Info
