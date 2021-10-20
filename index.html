@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ff6411534e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>TODO-list</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card card-body">
+                    <h2>Tehtävälista</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex">
+                <div class="card card-body form">
+                    <input type="text" id="task" placeholder="Lisää tehtävä">
+                    <button onclick="addNewTask()" id="btnAdd" class="button">Lisää</button>
+                    <ul id="shoppingList" class="shopList"></ul>
+
+                    <div class="row buttons">
+                        <div class="col-12">
+                            <button class="button btn-active" onclick="showAll()" id="btnAll">All</button>
+                            <button class="button" onclick="showDone()" id="btnDone">Done</button>
+                            <button class="button" onclick="showActive()" id="btnActive">Active</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="events.js"></script>
+</body>
+
+</html>
