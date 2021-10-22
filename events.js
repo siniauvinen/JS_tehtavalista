@@ -13,7 +13,7 @@ function submitByEnter(e) {
 function addNewTask() {
 
     // Tarkistaa, että listalle ei lisätä sopimattomia ostoksia
-    if (taskitem.value === "" || taskitem.value.length <= 2) {
+    if (taskitem.value === "" || taskitem.value.length <= 3) {
         taskitem.classList.add("error");
         taskitem.placeholder = "Kirjoita kenttään tehtävä";
         taskitem.value = "";
@@ -43,7 +43,7 @@ function addNewTask() {
         var link = document.createElement("a");
 
         // Lisää luokka deletelle
-        link.className = "delete-icon ml-auto";
+        link.className = "delete-icon";
 
         // Määrittele deletenapin ikoni
         link.innerHTML = '<i class ="fas fa-trash-alt"></i>';
@@ -62,12 +62,12 @@ function addNewTask() {
     }
 }
 
-//ul.InnerHtml to localStorage
+//ul.InnerHtml localStorageen
 function storeInLS() {
     localStorage.myItems = ul.innerHTML;
 }
 
-//Load ul.innerHTML from localStorage
+//Lataa ul.innerHTML localStoragesta
 document.addEventListener("DOMContentLoaded", getItems);
 function getItems(){
     var storedValues = localStorage.myItems;
@@ -75,7 +75,7 @@ function getItems(){
         ul.innerHTML = localStorage.myItems;
     }
 
-    //Check checkboxes of done items
+    //Merkitse done luokan omistavien luokkien checkboxit
     var checkBoxes = document.getElementsByClassName("item-check");
     for (var i = 0; i < checkBoxes.length; i++) {
         if (checkBoxes[i].parentElement.classList.contains("done")) {
